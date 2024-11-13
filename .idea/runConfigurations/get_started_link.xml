@@ -1,0 +1,15 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="get started link" type="JavaScriptTestRunnerPlaywright" nameIsGenerated="true">
+    <config value="$PROJECT_DIR$/playwright.config.js" />
+    <node-interpreter value="project" />
+    <playwright-package value="$PROJECT_DIR$/node_modules/@playwright/test" />
+    <working-dir value="$PROJECT_DIR$" />
+    <envs />
+    <scope-kind value="TEST" />
+    <test-file value="$PROJECT_DIR$/tests/example.spec.js" />
+    <test-names>
+      <test-name value="get started link" />
+    </test-names>
+    <method v="2" />
+  </configuration>
+</component>
