@@ -8,7 +8,10 @@ module.exports = defineConfig({
   forbidOnly: !!process.env.CI,
   retries: 2,
   workers: 1,
-  reporter: 'html',
+  reporter: [
+    ['html'],
+    ['allure-playwright'],
+  ],
   use: {
     baseURL: process.env.BASE_URL,
     trace: 'on-first-retry',
