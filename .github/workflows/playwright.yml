@@ -13,6 +13,13 @@ jobs:
   test:
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    env:
+      # Prefer GitHub Actions secrets/variables, but keep CI runnable with demo defaults.
+      BASE_URL: ${{ vars.BASE_URL || 'https://freelance-learn-automation.vercel.app' }}
+      LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL || 'admin@email.com' }}
+      LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD || 'admin@123' }}
+      ENROLL_ADDRESS: ${{ vars.ENROLL_ADDRESS || 'feni' }}
+      ENROLL_PHONE: ${{ vars.ENROLL_PHONE || '123456789' }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
